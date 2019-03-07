@@ -1,5 +1,5 @@
 {
-  "name": "v-aspect-ratio-vue",
+  "name": "v-aspect-ratio",
   "version": "1.0.0",
   "description": "Aspect ratio directive for Vue.js",
   "main": "dist/v-aspect-ratio.js",
