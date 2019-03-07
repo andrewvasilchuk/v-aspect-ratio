@@ -1,0 +1,35 @@
+{
+  "name": "v-aspect-ratio-vue",
+  "version": "1.0.0",
+  "description": "Aspect ratio directive for Vue.js",
+  "main": "dist/v-aspect-ratio.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3vilArthas/v-aspect-ratio.git"
+  },
+  "keywords": [
+    "vue",
+    "aspect-ratio"
+  ],
+  "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3vilArthas/v-aspect-ratio/issues"
+  },
+  "homepage": "https://github.com/3vilArthas/v-aspect-ratio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-loader": "^8.0.5",
+    "jest": "^24.3.0",
+    "vue": "^2.6.8",
+    "vue-template-compiler": "^2.6.8",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
