@@ -63,6 +63,10 @@ There's nothing you need to do in JavaScript except for installation. To use the
 </template>
 ```
 
+## Demo
+
+[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ko425ro4k7)
+
 ## 💉 Tests
 Jest is used for unit-tests.
 
