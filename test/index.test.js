@@ -19,4 +19,21 @@ describe("directive usage", () => {
 
     expect(wrapper.vm.$el.style.paddingBottom).toBe(`${(b / a) * 100}%`);
   });
+
+  it("should correctly set aspect ratio when value is updated", () => {
+    const [a, b] = [4, 3];
+
+    const wrapper = mountWithDirective({
+      template: `<div v-aspect-ratio="aspectRatio"></div>`,
+      data() {
+        return {
+          aspectRatio: "16:9"
+        }
+      }
+    });
+
+    wrapper.setData({aspectRatio: `${a}:${b}`})
+
+    expect(wrapper.vm.$el.style.paddingBottom).toBe(`${(b / a) * 100}%`);
+  });
 });
