@@ -32,7 +32,7 @@ Vue.use(AspectRatio);
 
 ```javascript
 import Vue from "vue";
-import AspectRatio from "v-aspect-ration";
+import AspectRatio from "v-aspect-ratio";
 
 Vue.directive("aspect-ratio", AspectRatio.directive)
 ```
@@ -40,7 +40,7 @@ Vue.directive("aspect-ratio", AspectRatio.directive)
 ### As a local directive
 
 ```javascript
-import AspectRatio from "v-aspect-ration";
+import AspectRatio from "v-aspect-ratio";
 
 export default {
   name: "YourAwesomeComponent",
