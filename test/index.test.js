@@ -28,12 +28,36 @@ describe("directive usage", () => {
       data() {
         return {
           aspectRatio: "16:9"
-        }
+        };
       }
     });
 
-    wrapper.setData({aspectRatio: `${a}:${b}`})
+    wrapper.setData({ aspectRatio: `${a}:${b}` });
 
     expect(wrapper.vm.$el.style.paddingBottom).toBe(`${(b / a) * 100}%`);
+  });
+
+  it("should throw an error when invalid value is passed", () => {
+    expect(() => {
+      mountWithDirective({
+        template: `<div v-aspect-ratio="'INVALID_VALUE'"></div>`
+      });
+    }).toThrow();
+  });
+
+  it("should throw an error when division by zero is detected", () => {
+    expect(() => {
+      mountWithDirective({
+        template: `<div v-aspect-ratio="'0:9'"></div>`
+      });
+    }).toThrow();
+  });
+
+  it("should throw an error when no value is provided", () => {
+    expect(() => {
+      mountWithDirective({
+        template: `<div v-aspect-ratio=""></div>`
+      });
+    }).toThrow();
   });
 });
