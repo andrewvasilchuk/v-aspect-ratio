@@ -1,10 +1,11 @@
 {
   "name": "v-aspect-ratio",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Aspect ratio directive for Vue.js",
   "main": "dist/v-aspect-ratio.js",
   "scripts": {
     "build": "webpack",
+    "build:ssr": "webpack --config webpack.config.ssr.js",
     "test": "jest"
   },
   "repository": {
@@ -16,6 +17,10 @@
     "aspect-ratio"
   ],
   "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
+  "files": [
+    "src",
+    "dist"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/3vilArthas/v-aspect-ratio/issues"
