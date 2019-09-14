@@ -38,5 +38,8 @@
     "vue-template-compiler": "^2.6.8",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
   }
 }
