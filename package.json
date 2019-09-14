@@ -22,8 +22,8 @@
   ],
   "main": "dist/v-aspect-ratio.js",
   "scripts": {
-    "build": "webpack",
-    "build:ssr": "webpack --config webpack.config.ssr.js",
+    "build": "webpack --config ./build/webpack.config.js",
+    "build:ssr": "webpack --config ./build/webpack.config.ssr.js",
     "prettier": "prettier --write ./**/*.{js,vue}",
     "test": "jest"
   },
