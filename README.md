@@ -50,6 +50,28 @@ export default {
 }
 ```
 
+### As a Nuxt.js SSR directive
+
+To apply directive during Nuxt.js SSR you need to do the following:
+
+```javascript
+// nuxt.config.js
+
+const aspectRatio = require('v-aspect-ratio/dist/v-aspect-ratio.ssr')
+
+module.exports = {
+  // ...
+  render: {
+    bundleRenderer: {
+      directives: {
+        'aspect-ratio': aspectRatio.default
+      },
+    },
+  },
+  // ...
+}
+```
+
 ## 🚀 Usage
 
 There's nothing you need to do in JavaScript except for installation. To use the plugin, simply use the v-aspect-ratio directive with the value you need.
