@@ -1,3 +1,3 @@
 export default {
-  pattern: /^\d+:\d+$/
+  pattern: /^\d+:\d+$/,
 }

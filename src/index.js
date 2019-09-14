@@ -1,10 +1,10 @@
-import directive from "./v-aspect-ratio";
+import directive from './v-aspect-ratio'
 
 const plugin = {
   install(Vue) {
-    Vue.directive("aspect-ratio", directive);
+    Vue.directive('aspect-ratio', directive)
   },
-  directive
-};
+  directive,
+}
 
-export default plugin;
+export default plugin

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "build:ssr": "webpack --config webpack.config.ssr.js",
-    "test": "jest"
+    "test": "jest",
+    "prettier": "prettier --write ./**/*.{js,vue}"
   },
   "repository": {
     "type": "git",

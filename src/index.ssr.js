@@ -1,3 +1,3 @@
-import directive from "./v-aspect-ratio.ssr";
+import directive from './v-aspect-ratio.ssr'
 
-export default directive;
+export default directive
