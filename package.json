@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/3vilArthas/v-aspect-ratio.git"
   },
+  "types": "types/index.d.ts",
   "license": "MIT",
   "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
   "files": [
