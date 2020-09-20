@@ -33,7 +33,7 @@ const plugins = [
 
 /** @type {import('rollup').RollupOptions} */
 export default flatten(
-  FILES.map(file => [
+  FILES.map((file) => [
     {
       input: file.path,
       external,
