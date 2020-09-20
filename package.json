@@ -33,9 +33,6 @@
     "lint:editorconfig": "editorconfig-checker",
     "test": "jest"
   },
-  "dependencies": {
-    "prettier": "^2.1.2"
-  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
@@ -53,6 +50,7 @@
     "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "lodash.flatten": "^4.4.0",
+    "prettier": "^2.1.2",
     "randomcolor": "^0.6.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.27.1",
