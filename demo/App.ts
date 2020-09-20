@@ -12,7 +12,7 @@ export default Vue.extend({
   render(h): VNode {
     return h('section', undefined, [
       h('h1', undefined, [h('code', undefined, 'v-aspect-ratio')]),
-      this.aspectRatios.map(value =>
+      this.aspectRatios.map((value) =>
         h(
           'div',
           {
