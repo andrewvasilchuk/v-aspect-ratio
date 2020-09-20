@@ -23,6 +23,8 @@
     "vetur"
   ],
   "main": "dist/v-aspect-ratio.js",
+  "unpkg": "dist/v-aspect-ratio.min.js",
+  "module": "dist/v-aspect-ratio.esm.js",
   "scripts": {
     "build": "rimraf dist/* && rollup -c build/rollup.config.prod.js && npm run build:declaration",
     "build:declaration": "tsc './src/index.ts' --outDir './dist' --declaration --emitDeclarationOnly",
