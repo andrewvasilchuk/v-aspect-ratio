@@ -29,6 +29,7 @@
     "dev": "rollup -c build/rollup.config.dev.js --watch",
     "fmt": "npm run fmt:prettier",
     "fmt:prettier": "prettier --write './**/*.{js,ts,css}'",
+    "lint:editorconfig": "editorconfig-checker",
     "test": "jest"
   },
   "dependencies": {
@@ -44,6 +45,7 @@
     "@types/jest": "^26.0.14",
     "@types/randomcolor": "^0.5.5",
     "@vue/test-utils": "^1.1.0",
+    "editorconfig-checker": "^3.2.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
