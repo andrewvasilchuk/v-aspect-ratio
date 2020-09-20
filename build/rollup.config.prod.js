@@ -3,6 +3,7 @@ import flatten from 'lodash.flatten'
 import typescript from '@rollup/plugin-typescript'
 import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
+import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 
 import basePlugins from './base/plugins/index'
 
@@ -62,12 +63,16 @@ export default flatten(
       external,
       output: {
         file: `${DIST_DIR}/${file.name}.min.js`,
-        format: 'umd',
-        exports: 'named',
-        globals,
-        name,
+        format: 'esm',
       },
-      plugins: [terser({ output: { comments: false } })].concat(plugins),
+      plugins: [
+        getBabelOutputPlugin({
+          presets: ['@babel/preset-env'],
+          plugins: [['@babel/plugin-transform-modules-umd', { globals }]],
+          moduleId: name,
+        }),
+        terser({ output: { comments: false } }),
+      ].concat(plugins),
     },
   ])
 )
