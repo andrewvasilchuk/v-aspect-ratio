@@ -29,6 +29,7 @@
     "dev": "rollup -c build/rollup.config.dev.js --watch",
     "fmt": "npm run fmt:prettier",
     "fmt:prettier": "prettier --write './**/*.{js,ts,css}'",
+    "lint": "npm run lint:editorconfig",
     "lint:editorconfig": "editorconfig-checker",
     "test": "jest"
   },
