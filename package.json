@@ -19,7 +19,8 @@
   "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
   "files": [
     "src",
-    "dist"
+    "dist",
+    "vetur"
   ],
   "main": "dist/v-aspect-ratio.js",
   "scripts": {
