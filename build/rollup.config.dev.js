@@ -1,4 +1,5 @@
 import path from 'path'
+import typescript from '@rollup/plugin-typescript'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
@@ -9,7 +10,7 @@ const DEMO_DIR = path.join(__dirname, '../demo')
 
 /** @type {import('rollup').RollupOptions} */
 export default {
-  input: path.join(DEMO_DIR, 'index.js'),
+  input: path.join(DEMO_DIR, 'index.ts'),
   output: {
     file: path.join(DEMO_DIR, 'demo.js'),
     format: 'iife',
@@ -20,6 +21,7 @@ export default {
     replace({
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
+    typescript(),
     serve({
       open: true,
       contentBase: DEMO_DIR,
