@@ -1,3 +1,4 @@
+import type { VNode } from 'vue'
 import Vue from 'vue'
 import randomColor from 'randomcolor'
 
@@ -8,9 +9,9 @@ export default Vue.extend({
       aspectRatios: ['16:9', '4:3', '1:1'],
     }
   },
-  render(h) {
-    return h('section', null, [
-      h('h1', null, [h('code', null, 'v-aspect-ratio')]),
+  render(h): VNode {
+    return h('section', undefined, [
+      h('h1', undefined, [h('code', undefined, 'v-aspect-ratio')]),
       this.aspectRatios.map(value =>
         h(
           'div',

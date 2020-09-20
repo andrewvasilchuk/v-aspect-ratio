@@ -1,5 +1,6 @@
 import path from 'path'
 import flatten from 'lodash.flatten'
+import typescript from '@rollup/plugin-typescript'
 import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 
@@ -8,11 +9,11 @@ import basePlugins from './base/plugins/index'
 const FILES = [
   {
     name: 'v-aspect-ratio',
-    path: path.join(__dirname, '../src/index.js'),
+    path: path.join(__dirname, '../src/index.ts'),
   },
   {
     name: 'v-aspect-ratio.ssr',
-    path: path.join(__dirname, '../src/index.ssr.js'),
+    path: path.join(__dirname, '../src/index.ssr.ts'),
   },
 ]
 const DIST_DIR = 'dist'
@@ -24,6 +25,9 @@ const globals = {
 const plugins = [
   replace({
     'process.env.NODE_ENV': JSON.stringify('production'),
+  }),
+  typescript({
+    tsconfig: './tsconfig.prod.json',
   }),
 ].concat(basePlugins)
 
