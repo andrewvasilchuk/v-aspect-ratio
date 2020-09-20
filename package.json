@@ -25,6 +25,7 @@
   "main": "dist/v-aspect-ratio.js",
   "scripts": {
     "build": "rimraf dist/* && rollup -c build/rollup.config.prod.js",
+    "dev": "rollup -c build/rollup.config.dev.js --watch",
     "prettier": "prettier --write ./**/*.{js,vue}",
     "test": "jest"
   },
@@ -39,8 +40,11 @@
     "jest": "^24.9.0",
     "lodash.flatten": "^4.4.0",
     "prettier": "^1.19.1",
+    "randomcolor": "^0.6.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.27.1",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-serve": "^1.0.4",
     "rollup-plugin-terser": "^7.0.2",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
