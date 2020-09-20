@@ -27,7 +27,7 @@
     "build": "rimraf dist/* && rollup -c build/rollup.config.prod.js && npm run build:declaration",
     "build:declaration": "tsc './src/index.ts' --outDir './dist' --declaration --emitDeclarationOnly",
     "dev": "rollup -c build/rollup.config.dev.js --watch",
-    "prettier": "prettier --write ./**/*.{ts}",
+    "fmt:prettier": "prettier --write './**/*.{js,ts,css}'",
     "test": "jest"
   },
   "dependencies": {
