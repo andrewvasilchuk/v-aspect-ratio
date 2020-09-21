@@ -2,6 +2,8 @@
 
 > Vue.js directive for setting an aspect ratio
 
+`1.x` documentation can be found [here](https://github.com/andrewvasilchuk/v-aspect-ratio/tree/1.x).
+
 ![Computer screens with different aspect ratios](./assets/img.jpg)
 
 - [v-aspect-ratio](#v-aspect-ratio)
