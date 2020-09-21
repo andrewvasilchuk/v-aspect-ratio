@@ -8,12 +8,13 @@
   - [Installation](#installation)
     - [Via NPM](#via-npm)
     - [Via Yarn](#via-yarn)
+    - [Directly in browser](#directly-in-browser)
   - [Initialization](#initialization)
     - [As a global plugin](#as-a-global-plugin)
     - [As a global directive](#as-a-global-directive)
     - [As a local directive](#as-a-local-directive)
     - [As a Nuxt.js SSR directive](#as-a-nuxtjs-ssr-directive)
-  - [Usage](#usage)
+    - [Directly in browser](#directly-in-browser-1)
   - [Demo](#demo)
   - [Tests](#tests)
   - [Development](#development)
@@ -32,6 +33,12 @@ $ npm install v-aspect-ratio --save
 
 ```bash
 $ yarn add v-aspect-ratio
+```
+
+### Directly in browser
+
+```html
+<script src="https://unpkg.com/v-aspect-ratio"></script>
 ```
 
 ## Initialization
@@ -90,6 +97,26 @@ module.exports = {
   // ...
 }
 ```
+
+### Directly in browser
+
+```html
+<!-- As a global directive -->
+<script>
+  Vue.use(VAspectRatio.default)
+  new Vue({
+    // ...
+  })
+</script>
+<!-- As a local directive -->
+<script>
+  new Vue({
+    // ...
+    directives: { "aspect-ratio": VAspectRatio.directive }
+    // ...
+  })
+</script>
+```html
 
 ## Usage
 
