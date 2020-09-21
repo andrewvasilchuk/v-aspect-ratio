@@ -1,13 +1,18 @@
-import type Vue from 'vue'
-import type { ComponentOptions } from 'vue'
+import type { ThisTypedShallowMountOptions } from '@vue/test-utils'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 
 import Plugin from '../../src'
 
+import TestComponent from '../components/TestComponent'
+
 export class TestManager {
-  static createWrapper(component: ComponentOptions<Vue>) {
+  static createWrapper(
+    options: ThisTypedShallowMountOptions<
+      InstanceType<typeof TestComponent>
+    > & { propsData?: { aspectRatio?: string } } = {}
+  ) {
     const localVue = createLocalVue()
     localVue.use(Plugin)
-    return shallowMount(component, { localVue })
+    return shallowMount(TestComponent, { localVue, ...options })
   }
 }
