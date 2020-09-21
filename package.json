@@ -7,13 +7,13 @@
     "aspect-ratio",
     "vue"
   ],
-  "homepage": "https://github.com/3vilArthas/v-aspect-ratio#readme",
+  "homepage": "https://github.com/andrewvasilchuk/v-aspect-ratio#readme",
   "bugs": {
-    "url": "https://github.com/3vilArthas/v-aspect-ratio/issues"
+    "url": "https://github.com/andrewvasilchuk/v-aspect-ratio/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3vilArthas/v-aspect-ratio.git"
+    "url": "git+https://github.com/andrewvasilchuk/v-aspect-ratio.git"
   },
   "license": "MIT",
   "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
