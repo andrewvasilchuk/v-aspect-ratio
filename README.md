@@ -1,14 +1,33 @@
-# Vue.js aspect ratio
+# v-aspect-ratio
+
+> Vue.js directive for setting an aspect ratio
 
 ![Computer screens with different aspect ratios](./assets/img.jpg)
 
-## 💿 Installation
+- [v-aspect-ratio](#v-aspect-ratio)
+  - [Installation](#installation)
+    - [Via NPM](#via-npm)
+    - [Via Yarn](#via-yarn)
+  - [Initialization](#initialization)
+    - [As a global plugin](#as-a-global-plugin)
+    - [As a global directive](#as-a-global-directive)
+    - [As a local directive](#as-a-local-directive)
+    - [As a Nuxt.js SSR directive](#as-a-nuxtjs-ssr-directive)
+  - [Usage](#usage)
+  - [Demo](#demo)
+  - [Tests](#tests)
+  - [Development](#development)
+  - [Build](#build)
+  - [License](#license)
+
+## Installation
 
 ### Via NPM
 
 ```bash
 $ npm install v-aspect-ratio --save
 ```
+
 ### Via Yarn
 
 ```bash
@@ -19,52 +38,52 @@ $ yarn add v-aspect-ratio
 
 ### As a global plugin
 
-It must be called before new Vue ()
+It must be called before `new Vue()`
 
-```javascript
-import Vue from "vue";
-import AspectRatio from "v-aspect-ratio";
+```js
+import Vue from 'vue'
+import AspectRatio from 'v-aspect-ratio'
 
-Vue.use(AspectRatio);
+Vue.use(AspectRatio)
 ```
 
 ### As a global directive
 
-```javascript
-import Vue from "vue";
-import AspectRatio from "v-aspect-ratio";
+```js
+import Vue from 'vue'
+import { directive } from 'v-aspect-ratio'
 
-Vue.directive("aspect-ratio", AspectRatio.directive)
+Vue.directive('aspect-ratio', directive)
 ```
 
 ### As a local directive
 
 ```javascript
-import AspectRatio from "v-aspect-ratio";
+import { directive } from 'v-aspect-ratio'
 
 export default {
-  name: "YourAwesomeComponent",
+  name: 'YourAwesomeComponent',
   directives: {
-    "aspect-ratio": AspectRatio.directive
-  }
+    'aspect-ratio': directive,
+  },
 }
 ```
 
 ### As a Nuxt.js SSR directive
 
-To apply directive during Nuxt.js SSR you need to do the following:
-
-```javascript
+```js
 // nuxt.config.js
 
-const aspectRatio = require('v-aspect-ratio/dist/v-aspect-ratio.ssr')
+const {
+  directive,
+} = require('v-aspect-ratio/dist/v-aspect-ratio.ssr.common.js')
 
 module.exports = {
   // ...
   render: {
     bundleRenderer: {
       directives: {
-        'aspect-ratio': aspectRatio.default
+        'aspect-ratio': directive,
       },
     },
   },
@@ -72,11 +91,9 @@ module.exports = {
 }
 ```
 
-## 🚀 Usage
+## Usage
 
-There's nothing you need to do in JavaScript except for installation. To use the plugin, simply use the v-aspect-ratio directive with the value you need.
-
-```vue
+```html
 <template>
   <div>
     <div v-aspect-ratio="'16:9'"></div>
@@ -87,21 +104,46 @@ There's nothing you need to do in JavaScript except for installation. To use the
 
 ## Demo
 
-[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ko425ro4k7)
+[![Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ko425ro4k7)
 
-## 💉 Tests
-Jest is used for unit-tests.
+## Tests
 
-You can run tests by typing this command in your console:
+[`fest`](https://jestjs.io) and [`@vue/test-utils`](https://vue-test-utils.vuejs.org) is used for unit tests.
+
+You can run unit tests by running the next command:
 
 ```bash
 npm run test
 ```
 
-## Powered by
+## Development
 
-* Babel
+1. Clone this repository
+2. Install the dependencies running `yarn install` or `npm install` command
+3. Start a development server using `npm run dev` command
 
-## 🔒 License
+## Build
+
+To build the production ready bundle simply run `npm run build`:
+
+After the successful build the following files will be generated in the `dist` folder:
+
+```
+├── plugin
+  ├── index.d.ts
+├── directive.d.ts
+├── helpers.d.ts
+├── index.d.ts
+├── v-aspect-ratio.common.js
+├── v-aspect-ratio.esm.js
+├── v-aspect-ratio.js
+├── v-aspect-ratio.min.js
+├── v-aspect-ratio.ssr.common.js
+├── v-aspect-ratio.ssr.esm.js
+├── v-aspect-ratio.ssr.js
+├── v-aspect-ratio.ssr.min.js
+```
+
+## License
 
 [MIT](http://opensource.org/licenses/MIT)
