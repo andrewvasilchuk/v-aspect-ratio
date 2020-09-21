@@ -1,6 +1,7 @@
 {
   "name": "v-aspect-ratio",
   "version": "1.1.0",
+  "private": false,
   "description": "Aspect ratio directive for Vue.js",
   "keywords": [
     "aspect-ratio",
