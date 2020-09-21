@@ -9,6 +9,11 @@ export default Vue.extend({
       aspectRatios: ['16:9', '4:3', '1:1'],
     }
   },
+  methods: {
+    change() {
+      this.aspectRatios.reverse()
+    },
+  },
   render(h): VNode {
     return h('section', undefined, [
       h('h1', undefined, [h('code', undefined, 'v-aspect-ratio')]),
@@ -21,6 +26,11 @@ export default Vue.extend({
           },
           value
         )
+      ),
+      h(
+        'button',
+        { attrs: { type: 'button' }, on: { click: this.change } },
+        'Change'
       ),
     ])
   },
