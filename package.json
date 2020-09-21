@@ -33,9 +33,10 @@
     "fmt": "npm run fmt:prettier && npm run fmt:package-json",
     "fmt:package-json": "sort-package-json",
     "fmt:prettier": "prettier --write './**/*.{js,ts,css,md}'",
-    "lint": "npm run lint:editorconfig && npm run lint:package-json",
+    "lint": "npm run lint:editorconfig && npm run lint:package-json && npm run lint:prettier",
     "lint:editorconfig": "editorconfig-checker",
     "lint:package-json": "sort-package-json --check",
+    "lint:prettier": "prettier --check './**/*.{js,ts,css,md}'",
     "test": "jest"
   },
   "devDependencies": {
