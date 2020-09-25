@@ -17,6 +17,7 @@
     - [As a local directive](#as-a-local-directive)
     - [As a Nuxt.js SSR directive](#as-a-nuxtjs-ssr-directive)
     - [Directly in browser](#directly-in-browser-1)
+  - [Usage](#usage)
   - [Demo](#demo)
   - [Tests](#tests)
   - [Development](#development)
@@ -114,11 +115,11 @@ module.exports = {
 <script>
   new Vue({
     // ...
-    directives: { "aspect-ratio": VAspectRatio.directive }
+    directives: { 'aspect-ratio': VAspectRatio.directive },
     // ...
   })
 </script>
-```html
+```
 
 ## Usage
 
