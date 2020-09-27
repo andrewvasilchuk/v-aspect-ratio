@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v-aspect-ratio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <style>
+      .card {
+        width: 512px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <section class="section">
+        <div class="container">
+          <h1 class="title has-text-centered is-sr-only">v-aspect-ratio</h1>
+          <app-card
+            :aspect-ratio="aspectRatio"
+            :dimensions="selectedValue.dimensions"
+          ></app-card>
+          <div class="control mt-2 has-text-centered">
+            <label v-for="(value, index) in values" :key="index" class="radio">
+              <input
+                v-model="aspectRatio"
+                type="radio"
+                :value="value.value"
+                name="value"
+              />
+              {{ value.value }}
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+    <template id="card">
+      <article class="card">
+        <div class="card-image">
+          <figure v-aspect-ratio="aspectRatio" class="image">
+            <img
+              :src="`https://via.placeholder.com/${dimensions}`"
+              alt="Placeholder image"
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <header class="media">
+            <div class="media-content">
+              <h1 class="title is-4">
+                Vue.js directive for setting an aspect ratio
+              </h1>
+              <p class="subtitle is-6">Vue.js is awesome, isn't it?</p>
+            </div>
+          </header>
+
+          <div class="content">
+            <p>
+              You can change the aspect ration of the above image by checking
+              out the appropriate radio button below.
+              <br />
+              <a href="#">#vue</a>
+              <a href="#">#css</a>
+              <a href="#">#aspect-ratio</a>
+            </p>
+            <time :datetime="new Date().toISOString()" class="is-size-7"
+              >{{ formatDate(new Date()) }}</time
+            >
+          </div>
+        </div>
+      </article>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://unpkg.com/v-aspect-ratio"></script>
+    <script>
+      Vue.component('AppCard', {
+        name: 'AppCard',
+        template: '#card',
+        directives: {
+          'aspect-ratio': VAspectRatio.directive,
+        },
+        props: {
+          aspectRatio: {
+            type: String,
+            required: true,
+          },
+          dimensions: {
+            type: String,
+            required: true,
+          },
+        },
+        methods: {
+          formatDate(date) {
+            return new Intl.DateTimeFormat('en-US', {
+              year: 'numeric',
+              month: 'numeric',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              hour12: false,
+            }).format(date)
+          },
+        },
+      })
+
+      new Vue({
+        name: 'App',
+        el: '#app',
+        data() {
+          return {
+            aspectRatio: '4:3',
+            values: [
+              {
+                value: '4:3',
+                dimensions: '1024x768',
+              },
+              {
+                value: '16:9',
+                dimensions: '1024x576',
+              },
+              {
+                value: '1:1',
+                dimensions: '1024x1024',
+              },
+            ],
+          }
+        },
+        computed: {
+          selectedValue() {
+            return this.values.find((value) => value.value === this.aspectRatio)
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
