@@ -140,7 +140,7 @@ module.exports = {
 
 ## Tests
 
-[`fest`](https://jestjs.io) and [`@vue/test-utils`](https://vue-test-utils.vuejs.org) is used for unit tests.
+[`jest`](https://jestjs.io) and [`@vue/test-utils`](https://vue-test-utils.vuejs.org) is used for unit tests.
 
 You can run unit tests by running the next command:
 
