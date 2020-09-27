@@ -134,6 +134,8 @@ module.exports = {
 
 ## Demo
 
+[Demo](https://andrewvasilchuk.github.io/v-aspect-ratio)
+
 [![Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ko425ro4k7)
 
 ## Tests
