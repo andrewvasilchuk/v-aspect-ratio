@@ -9,9 +9,9 @@ A clear and concise description of what the bug is.
 
 ### Steps to reproduce the bug
 
-1. Go to [...]
-2. Click on [...]
-3. Scroll down to [...]
+1. Go to ...
+2. Click on ...
+3. Scroll down to ...
 4. See error
 
 ### Expected behavior
@@ -26,10 +26,10 @@ A clear and concise description of what you expected to happen.
 
 **Environment:**
 
-- Device: [e.g. Mac or iPhone X]
-- OS: [e.g. macOS Mojave or iOS 12]
-- Browser: [e.g. Chrome]
-- Version: [e.g. 70]
+- Device: (e.g. Mac or iPhone X)
+- OS: (e.g. macOS Mojave or iOS 12)
+- Browser: (e.g. Chrome)
+- Version: (e.g. 70)
 
 ### Demo link
 
