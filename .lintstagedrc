@@ -1,4 +1,6 @@
 {
-  "*.{js,ts,css,md}": ["prettier", "editorconfig-checker"],
-  "package.json": ["sort-package-json --check"]
+  "*": ["editorconfig-checker"],
+  "*.{js,ts,css,md}": ["prettier"],
+  "package.json": ["sort-package-json --check"],
+  "*.md": ["remark"]
 }
