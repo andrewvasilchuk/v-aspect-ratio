@@ -1,6 +1,6 @@
 const path = require('path')
 
-const { directive } = require('../../dist/v-aspect-ratio.ssr.common')
+const { directive } = require('../../src/index.ssr')
 
 /**
  * @type {import('@nuxt/types').NuxtConfig} config

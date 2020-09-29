@@ -9,13 +9,17 @@ describe('v-aspect-ratio.ssr', () => {
 
   it('should correctly set aspect-ratio', async (done) => {
     const page = await createPage('/')
-    const element = await page.$('#target')
-    if (element === null) {
-      done.fail()
+    const element = await page.$('#target section')
+    if (element) {
+      expect(await element.getAttribute('style')).toBe('padding-bottom:56.25%;')
     } else {
-      const style = await element.getAttribute('style')
-      expect(style).toBe('padding-bottom:56.25%;')
-      done()
+      done.fail()
     }
+    const elements = await page.$$('#target div')
+    for (const element of elements) {
+      const style = await element.getAttribute('style')
+      expect(style).toBe('color:red;padding-bottom:56.25%;')
+    }
+    done()
   })
 })
