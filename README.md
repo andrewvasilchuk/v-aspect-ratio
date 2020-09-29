@@ -136,6 +136,7 @@ module.exports = {
 
 [Demo](https://andrewvasilchuk.github.io/v-aspect-ratio)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/80640ea5713a41d4ab888679d8015540)](https://app.codacy.com/gh/andrewvasilchuk/v-aspect-ratio?utm_source=github.com&utm_medium=referral&utm_content=andrewvasilchuk/v-aspect-ratio&utm_campaign=Badge_Grade)
 [![Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ko425ro4k7)
 
 ## Tests
