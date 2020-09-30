@@ -2,6 +2,17 @@
 
 > Vue.js directive for setting an aspect ratio
 
+[![BuildStatus](https://img.shields.io/github/workflow/status/andrewvasilchuk/v-aspect-ratio/Integration)](https://github.com/andrewvasilchuk/v-aspect-ratio/actions?query=workflow%3AIntegration)
+[![Version](https://img.shields.io/npm/v/v-aspect-ratio)](https://www.npmjs.com/package/v-aspect-ratio)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/v-aspect-ratio)](https://bundlephobia.com/result?p=v-aspect-ratio)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a12c2d8dbd44f028aacddb254df983d)](https://www.codacy.com/gh/andrewvasilchuk/v-aspect-ratio/dashboard?utm_source=github.com&utm_medium=referral&utm_content=andrewvasilchuk/v-aspect-ratio&utm_campaign=Badge_Grade)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/andrewvasilchuk/v-aspect-ratio.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/andrewvasilchuk/v-aspect-ratio/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/andrewvasilchuk/v-aspect-ratio.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/andrewvasilchuk/v-aspect-ratio/context:javascript)
+[![codecov](https://codecov.io/gh/andrewvasilchuk/v-aspect-ratio/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewvasilchuk/v-aspect-ratio)
+[![Downloads](https://img.shields.io/npm/dt/v-aspect-ratio)](https://www.npmjs.com/package/v-aspect-ratio)
+[![LastCommit](https://img.shields.io/github/last-commit/andrewvasilchuk/v-aspect-ratio)](https://github.com/andrewvasilchuk/v-aspect-ratio/commits/master)
+[![License](https://img.shields.io/npm/l/v-aspect-ratio)](https://github.com/andrewvasilchuk/v-aspect-ratio/blob/master/LICENSE)
+
 `1.x` documentation can be found [here](https://github.com/andrewvasilchuk/v-aspect-ratio/tree/1.x).
 
 ![Computer screens with different aspect ratios](./assets/img.jpg)
