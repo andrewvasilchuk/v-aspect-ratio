@@ -1,5 +1,5 @@
 {
-  "v-b-visible": {
+  "v-aspect-ratio": {
     "global": true,
     "description": "A directive that allows to set an aspect ratio of an element."
   }
