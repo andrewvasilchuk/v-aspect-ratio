@@ -27,9 +27,9 @@
     "vetur"
   ],
   "scripts": {
-    "build": "rimraf dist/* && rollup -c build/rollup.config.prod.js && npm run build:declaration",
+    "build": "rimraf dist/* && rollup -c build/rollup.config.prod.ts && npm run build:declaration",
     "build:declaration": "tsc './src/index.ts' --outDir './dist' --declaration --emitDeclarationOnly",
-    "dev": "rollup -c build/rollup.config.dev.js --watch",
+    "dev": "rollup -c build/rollup.config.dev.ts --watch",
     "fmt": "npm run fmt:prettier && npm run fmt:package-json",
     "fmt:package-json": "sort-package-json",
     "fmt:prettier": "prettier --write './**/*.{js,ts,css,md}'",
@@ -54,6 +54,7 @@
     "@rollup/plugin-replace": "^2.3.3",
     "@rollup/plugin-typescript": "^6.0.0",
     "@types/jest": "^26.0.14",
+    "@types/lodash.flatten": "^4.4.6",
     "@types/randomcolor": "^0.5.5",
     "@vue/test-utils": "^1.1.0",
     "editorconfig-checker": "^3.2.0",

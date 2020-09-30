@@ -5,7 +5,8 @@ import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 
-import basePlugins from './base/plugins/index'
+// @ts-expect-error
+import basePlugins from './base/plugins/index.ts'
 
 const FILES = [
   {
@@ -32,7 +33,6 @@ const plugins = [
   }),
 ].concat(basePlugins)
 
-/** @type {import('rollup').RollupOptions} */
 export default flatten(
   FILES.map((file) => [
     {
@@ -56,7 +56,7 @@ export default flatten(
           format: 'esm',
         },
       ],
-      plugins: [].concat(plugins),
+      plugins,
     },
     {
       input: file.path,
@@ -71,7 +71,7 @@ export default flatten(
           plugins: [['@babel/plugin-transform-modules-umd', { globals }]],
           moduleId: name,
         }),
-        terser({ output: { comments: false } }),
+        terser({ format: { comments: false } }),
       ].concat(plugins),
     },
   ])

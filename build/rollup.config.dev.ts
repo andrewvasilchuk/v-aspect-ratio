@@ -1,14 +1,16 @@
 import path from 'path'
 import typescript from '@rollup/plugin-typescript'
+// @ts-expect-error
 import serve from 'rollup-plugin-serve'
+// @ts-expect-error
 import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
 
-import plugins from './base/plugins/index'
+// @ts-expect-error
+import plugins from './base/plugins/index.ts'
 
 const DEMO_DIR = path.join(__dirname, '../demo')
 
-/** @type {import('rollup').RollupOptions} */
 export default {
   input: path.join(DEMO_DIR, 'index.ts'),
   output: {
