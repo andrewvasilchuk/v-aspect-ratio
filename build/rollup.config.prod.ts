@@ -27,6 +27,7 @@ const globals = {
 const plugins = [
   replace({
     'process.env.NODE_ENV': JSON.stringify('production'),
+    preventAssignment: true,
   }),
   typescript({
     tsconfig: './tsconfig.prod.json',

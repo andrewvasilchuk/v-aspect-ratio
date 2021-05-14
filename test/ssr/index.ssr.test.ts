@@ -1,25 +1,22 @@
-import { setupTest, createPage } from '@nuxtjs/module-test-utils'
+import path from 'path'
+import { setupTest, get } from '@nuxt/test-utils'
 
 describe('v-aspect-ratio.ssr', () => {
   setupTest({
-    testDir: __dirname,
-    fixture: __dirname,
-    browser: true,
+    rootDir: path.resolve(__dirname, './fixture'),
+    testDir: path.resolve(__dirname, '..'),
+    server: true,
   })
 
-  it('should correctly set aspect-ratio', async (done) => {
-    const page = await createPage('/')
-    const element = await page.$('#target section')
-    if (element) {
-      expect(await element.getAttribute('style')).toBe('padding-bottom:56.25%;')
-    } else {
-      done.fail()
-    }
-    const elements = await page.$$('#target div')
-    for (const element of elements) {
-      const style = await element.getAttribute('style')
-      expect(style).toBe('color:red;padding-bottom:56.25%;')
-    }
-    done()
+  it('should correctly set aspect-ratio', async () => {
+    const { body } = await get('/')
+    expect(body).toContain(
+      '<section id="simple" style="padding-bottom:56.25%;"></section>'
+    )
+    expect(
+      (body as string).match(
+        /<div style="color:red;padding-bottom:56.25%;"><\/div>/g
+      )?.length
+    ).toBe(3)
   })
 })

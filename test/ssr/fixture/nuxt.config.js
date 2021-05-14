@@ -1,6 +1,6 @@
 const path = require('path')
 
-const { directive } = require('../../src/index.ssr')
+const { directive } = require('../../../src/index.ssr')
 
 /**
  * @type {import('@nuxt/types').NuxtConfig} config
