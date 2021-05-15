@@ -1,5 +1,4 @@
-import type { VNode } from 'vue'
-import Vue from 'vue'
+import Vue, { VNode } from 'vue'
 
 import { DEFAULT_ASPECT_RATIO } from '../fixtures'
 

@@ -1,13 +1,12 @@
 import path from 'path'
 import typescript from '@rollup/plugin-typescript'
-// @ts-expect-error
+// @ts-expect-error `'rollup-plugin-serve'` has no type declarations
 import serve from 'rollup-plugin-serve'
-// @ts-expect-error
+// @ts-expect-error `'rollup-plugin-livereload'` has no type declarations
 import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
 
-// @ts-expect-error
-import plugins from './base/plugins/index.ts'
+import plugins from './base/plugins/index'
 
 const DEMO_DIR = path.join(__dirname, '../demo')
 

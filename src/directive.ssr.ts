@@ -1,8 +1,9 @@
+/* eslint-disable no-param-reassign */
 import type { VNode, VNodeDirective } from 'vue'
 
 import { getPaddingBottom } from './helpers'
 
-export function directive(node: VNode, dir: VNodeDirective) {
+export function directive(node: VNode, dir: VNodeDirective): void {
   const paddingBottom = getPaddingBottom(dir.value)
 
   /* istanbul ignore next */
@@ -16,7 +17,7 @@ export function directive(node: VNode, dir: VNodeDirective) {
     /* istanbul ignore next */
     node.data.style += `padding-bottom: ${paddingBottom};`
   } else {
-    // @ts-expect-error
+    // @ts-expect-error `style` type is `object`
     node.data.style.paddingBottom = paddingBottom
   }
 }

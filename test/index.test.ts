@@ -8,15 +8,13 @@ describe('v-aspect-ratio', () => {
     expect(wrapper.element.style.paddingBottom).toBe('56.25%')
   })
 
-  it('should correctly set aspect ratio when value is updated', (done) => {
+  it('should correctly set aspect ratio when value is updated', async () => {
     const wrapper = TestManager.createWrapper({
       propsData: { aspectRatio: '16:9' },
     })
     expect(wrapper.element.style.paddingBottom).toBe('56.25%')
     wrapper.vm.value = '4:3'
-    wrapper.vm.$nextTick(() => {
-      expect(wrapper.element.style.paddingBottom).toBe('75%')
-      done()
-    })
+    await wrapper.vm.$nextTick()
+    expect(wrapper.element.style.paddingBottom).toBe('75%')
   })
 })

@@ -1,5 +1,4 @@
-import type { VNode } from 'vue'
-import Vue from 'vue'
+import Vue, { VNode } from 'vue'
 import randomColor from 'randomcolor'
 
 export default Vue.extend({

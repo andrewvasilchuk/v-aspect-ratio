@@ -5,8 +5,7 @@ import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 
-// @ts-expect-error
-import basePlugins from './base/plugins/index.ts'
+import basePlugins from './base/plugins/index'
 
 const FILES = [
   {
