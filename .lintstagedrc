@@ -1,6 +1,7 @@
 {
   "*": ["editorconfig-checker"],
   "*.{js,ts,css,md}": ["prettier"],
+  "*.{js,ts}": "eslint",
   "package.json": ["sort-package-json --check"],
   "*.md": ["remark"]
 }
