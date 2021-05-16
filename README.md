@@ -12,6 +12,7 @@
 [![Downloads](https://img.shields.io/npm/dt/v-aspect-ratio)](https://www.npmjs.com/package/v-aspect-ratio)
 [![LastCommit](https://img.shields.io/github/last-commit/andrewvasilchuk/v-aspect-ratio)](https://github.com/andrewvasilchuk/v-aspect-ratio/commits/master)
 [![License](https://img.shields.io/npm/l/v-aspect-ratio)](https://github.com/andrewvasilchuk/v-aspect-ratio/blob/master/LICENSE)
+[![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/2800-shield.svg)](https://madewithvuejs.com/p/v-aspect-ratio/shield-link)
 
 `1.x` documentation can be found [here](https://github.com/andrewvasilchuk/v-aspect-ratio/tree/1.x).
 
