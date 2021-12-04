@@ -17,6 +17,7 @@ export class TestManager {
   ) {
     const localVue = createLocalVue()
     localVue.use(Plugin)
-    return shallowMount(TestComponent, { localVue, ...options })
+    const wrapper = shallowMount(TestComponent, { localVue, ...options })
+    return wrapper as typeof wrapper & { element: HTMLDivElement }
   }
 }
