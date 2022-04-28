@@ -2,7 +2,6 @@ import path from 'path'
 import typescript from '@rollup/plugin-typescript'
 // @ts-expect-error `'rollup-plugin-serve'` has no type declarations
 import serve from 'rollup-plugin-serve'
-// @ts-expect-error `'rollup-plugin-livereload'` has no type declarations
 import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
 
@@ -21,7 +20,6 @@ export default {
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify('development'),
-      preventAssignment: true,
     }),
     typescript(),
     serve({
